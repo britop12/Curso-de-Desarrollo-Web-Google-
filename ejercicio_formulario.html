@@ -4,25 +4,34 @@
 	<title>Formulario de registro - Mi web</title>
 </head>
 <body>
+	<!--
+	Para mayor información sobre la etiqueta <label>, https://developer.mozilla.org/es/docs/Web/HTML/Elemento/label.
+	-->
 	<h1>Formulario de registro</h1>
 	<form action="" method="get">
 		<p>
-			<label for="nombre">Nombre:</label> <input type="text" name="nombre" maxlength="50" 
+			<label for="nombre">Nombre:</label> <input type="text" name="nombre" maxlength="50"
 			id="nombre">
 		</p>
 		<p>
 			<label for="apellidos">Apellidos:</label> <input type="text" name="Apellidos" maxlength="50" id="apellidos">
 		</p>
 		<p>
-			Sexo: <input type="radio" name="sexo" id="hombre" value="hombre"> <label for="hombre">hombre</label> 
+			Sexo: <input type="radio" name="sexo" id="hombre" value="hombre"> <label for="hombre">hombre</label>
 			<input type="radio" name="sexo" id="mujer" value="mujer"> <label for="mujer">mujer</label>
+			<!--
+			Aquí tener mucho cuidado con el atributo name, pues si tienen difente valor, al seleccionar unas de las opciones, no seleccionaria una sino que seleccionaria todas en casos el valor de name sean difentes.
+			-->
 		</p>
 		<p>
 			<label for="correo">Correo:</label> <input type="text" name="correo" maxlength="100" id="correo">
 		</p>
 		<p>
-			<label for="poblacion">Poblacion: </label> 
+			<label for="poblacion">Poblacion: </label>
 			<select name="poblacion" id="poblacion">
+				<!--
+				Se usa la etiqueta <option> para agregar un valor a la lista de seleccion
+				-->
 				<option>Alicante</option>
 				<option>Madrid</option>
 				<option>Sevilla</option>
@@ -30,14 +39,14 @@
 			</select>
 		</p>
 		<p>
-			<label for="descripcion" id="descripcion">Descripción:</label> 
+			<label for="descripcion" id="descripcion">Descripción:</label>
 			<textarea name="descripcion" id="descripcion" rows="6" cols="60"></textarea>
 		</p>
 		<p>
-			<input type="checkbox" name="info" checked="checked" id="info"> <label for="info">Deseo recibir información sobre novedades y ofertas.</label> 
+			<input type="checkbox" name="info" checked="checked" id="info"> <label for="info">Deseo recibir información sobre novedades y ofertas.</label>
 		</p>
 		<p>
-			<input type="checkbox" name="condiciones" id="condiciones"> <label for="condiciones">Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos.</label> 
+			<input type="checkbox" name="condiciones" id="condiciones"> <label for="condiciones">Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos.</label>
 		</p>
 		<p>
 			<input type="submit" name="Enviar">
