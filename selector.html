@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Selectores</title>
+  </head>
+  <body>
+    <h2>Selectores</h2>
+    <p>
+      Cada regla está formada por uno o más selectores y una declaración formada por un bloque de estilos que define los estilos a aplicar para los elementos del documento que cumplan con el selector. En este ejemplo, el selector es el elemento de HTML h1, por lo que esta regla se aplicará a todos los encabezados de nivel 1 de la página web.
+    </p>
+    <img src="recursos\css_img\element_css.PNG" alt="Reglas css" width="500" height="200">
+    <p>
+      Cada declaración de estilos se define entre llaves, y está formada por parejas propiedad valor. En este ejemplo, a los elementos de tipo h1 se le aplican dos propiedades: en la primera propiedad se indica que el color del texto debe ser rojo; en la segunda propiedad se indica que el color de fondo debe ser verde.
+    </p>
+    <hr>
+    <h2>¿Qué tipos de selectores existen en CSS?</h2>
+    <p>
+      La lista de selectores definidos en CSS3 es enorme.
+    </p>
+    <p>
+      En esta página se pondran los mas "usados" o mas "importantes".
+    </p>
+    <hr>
+    <h2>Selectores de Tipo o elemento o etiqueta</h2>
+    <p>
+      El selector de tipo también es conocido como selector de elemento o selector de etiqueta. Este selector hace referencia a todos los elementos o etiquetas de un mismo tipo. Para seleccionar una etiqueta, hacemos referencia a esa etiqueta en nuestro código CSS.
+      <br>
+      <img src="recursos\css_img\selector_type.PNG" alt="Selector de tipo" width="500" height="300">
+    </p>
+    <hr>
+    <h2>Selectores de clase</h2>
+    <p>
+      El atributo “class” es un atributo global, común a todas las etiquetas HTML, permite especificar las clases que se aplicarán a un determinado elemento. En CSS, los nombres de las clases vienen precedidos por el carácter “.”; es imprescindible que recuerdes incluir este carácter en CSS y no lo incluyas en el atributo “class” de las etiquetas en HTML, un error muy común en los primeros desarrollos de cualquier persona.
+      <br>
+      <img src="recursos\css_img\selector_class.PNG" alt="Selector de clase" width="500" height="300">
+    </p>
+    <hr>
+    <h2>Combinación de selectores</h2>
+    <p>
+      En este ejemplo, la regla CSS combina “span”, un selector de tipo, con “.bold”, un selector de clase. Esta combinación se aplica solo a las etiquetas span que tengan la clase .bold.
+      <br>
+      <img src="recursos\css_img\comb_type_class.PNG" alt="Combinación de selectores" width="500" height="300">
+    </p>
+    <hr>
+    <h2>Selectores de identificadores</h2>
+    <p>
+      Se aplica a aquellas etiquetas cuyo atributo “id” coincida con el texto tras la “#”. Recuerda que el atributo “id” se supone único en el documento HTML, por tanto, una regla de identificador sólo se aplicaría una vez en toda una página web. Sin embargo, el valor de un “id” se puede repetir entre diferentes páginas web.
+      <br>
+      <img src="recursos\css_img\selector_id.PNG" alt="Selectores de ID" width="500" height="300" >
+    </p>
+    <hr>
+    <h2>Selección de etiquetas anidadas</h2>
+    <p>
+      Es posible utilizar la combinación de selectores para seleccionar etiquetas anidadas. Si utilizamos combinaciones de selectores, podemos aplicar la regla solo a las etiquetas span que estén anidadas en etiquetas div mediante la regla “div espacio en blanco span”, o a todos los hipervínculos que estén en el interior de una etiqueta span mediante “span espacio en blanco a”.
+      <br>
+      <img src="recursos\css_img\selector_anida.PNG" alt="Seleccion de etiquetas anidadas" width="500" height="300">
+    </p>
+    <p>
+      Como ves, para anidar selectores, se especifican uno tras otro separados por espacios en blanco, siempre empezando por el elemento con menor nivel de anidamiento en el documento HTML.
+    </p>
+    <hr>
+    <h2>Selector Universal (*)</h2>
+    <p>
+      El selector universal se representa mediante un asterisco. Cuando se incluye en una regla, el selector universal selecciona todos los elementos. Se aplica a veces para inicializar todos los elementos de una página web a un mismo estado.
+      <br>
+      <img src="recursos\css_img\selector_uni.PNG" alt="Selector Universal" width="150" height="150">
+    </p>
+    <p>
+      En este ejemplo, el margen y el relleno de todos los elementos se establece en cero píxeles.
+    </p>
+    <hr>
+    <h2>:estado</h2>
+    <p>
+      El <b>estado :link</b>, solo aplicable a enlaces, modifica el estilo por defecto de aquellos hipervínculos no visitados a los que se aplique la regla.
+      <br>
+      <img src="recursos\css_img\state_link.PNG" alt="Estado link" width="500" height="300">
+    </p>
+    <p>
+      El <b>estado :visited</b> se aplicará a los hipervínculos visitados, es el selector complementario a :link.
+      <br>
+      <img src="recursos\css_img\state_visited.PNG" alt="Estado visitado" width="500" height="300">
+    <br>
+      Por tanto, en este ejemplo esta regla de CSS se aplica a los dos primeros enlaces.
+    </p>
+    <p>
+      El <b>estado :hover</b> modifica el estilo cuando el puntero del ratón está sobre un elemento al que se le aplica la regla.
+      <br>
+      <img src="recursos\css_img\state_hover.PNG" alt="Estado hover" width="500" height="300">
+      <br>
+      Como puedes ver en el ejemplo, todos los enlaces tienen el estilo aplicado, pero solo lo muestra el enlace “Visitado”, puesto que tiene el puntero sobre él. Es posible utilizar :hover en todos los elementos, no solo en los hipervínculos. En caso de enlaces, es muy importante declarar :hover después de :link y :visited, en caso de que existan, para que :hover funcione correctamente.
+      </p>
+      <p>
+        El <b>estado :active</b> se aplica a enlaces que están siendo pulsados. Normalmente no mantenemos pulsado un hipervínculo, puesto que su principal utilidad es la navegación, pero es posible definir enlaces sin destino para casos particulares como pueden ser los menús desplegables. Al pulsar se activa el estilo definido por esta regla de CSS, y al dejar de pulsar se deja de aplicar la regla. <b>De nuevo, es necesario declarar :active después de :hover, para que tenga efecto.</b>
+        <br>
+        <img src="recursos\css_img\state_active.PNG" alt="Estado active" width="550" height="300">
+      </p>
+      <p>
+        Que :active y :hover tengan los mismos estilos puede ser una solución elegante al problema de accesibilidad desde tabletas y teléfonos inteligente, el único inconveniente es que solo servirá para hipervínculos, puesto que :active solo se aplica a este tipo de elementos. Puedes utilizar :link, :visited y :active solos para aplicarlos a todos los enlaces de la página, aunque es más común verlos acompañados del selector “a”. También es posible utilizarlos en combinación con clases e identificadores, así como en anidamientos, del mismo modo que con los selectores básicos.
+      </p>
+      <hr>
+      <h2>:focus</h2>
+      <p>
+        Así como los enlaces tienen selectores particulares, los elementos de formulario, que aceptan entradas por parte del usuario (campos de texto, listas desplegables, etc.) también tienen un selector que puede resultar interesante para destacar el elemento que está activo o, siendo rigurosos, el elemento que tiene el <b>foco</b>. Este selector también se puede aplicar a los enlaces, ya que pueden recibir el foco desde el teclado.
+      </p>
+      <p>
+      <img src="recursos\css_img\state_focus.PNG" alt="Estado focus" width="550" height="300">
+      <br>
+      Para mejorar la experiencia del usuario, puede ser una buena práctica resaltar los campos de formulario que están siendo utilizados en cada momento.
+      </p>
+  </body>
+</html>
