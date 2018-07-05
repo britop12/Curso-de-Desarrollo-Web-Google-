@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Selectores Avanzados</title>
+  </head>
+  <body>
+    <h2>Descendientes Directos (>)</h2>
+    <p>
+      <img src="recursos\css_img\adv_des.PNG" alt="Descendientes Directos" width="450" height="250">
+      <br>
+      Si entre el selector de la etiqueta superior, en este caso la lista con identificador “lista” y el de las etiquetas anidadas incluimos el carácter “mayor que” (>), solo se seleccionarán los elementos <b>li</b> que sean descendientes directos.
+    </p>
+    <p>
+      Desafortunadamente, ni si quiera en CSS3 existe el carácter “menor que” (<) para seleccionar etiquetas padre.
+    </p>
+    <hr>
+    <h2>Elementos contiguos</h2>
+    <p>
+      <img src="recursos\css_img\adv_contiguo.PNG" alt="Elementos contiguos" width="450" height="250">
+      <br>
+      En el ejemplo puedes ver cómo funciona el selector <strong>+</strong> entre dos elementos. En este caso, se aplicarán los estilos a todos los elementos span que estén tras una imagen con clase “new”. <strong>Ojo, solo a los inmediatamente contiguos.</strong>
+    </p>
+    <h3>:first-child</h3>
+    <p>
+      <img src="recursos\css_img\adv_first.PNG" alt="Primer elemento" width="450" height="250">
+      <br>
+      El selector <b>:first-child</b> de forma conjunta a un elemento, en el ejemplo <b>li</b>, aplica la regla al primer elemento de ese tipo, que además sea el primero anidado, en este caso en la etiqueta <b>ul</b>.
+    </p>
+    <h3>:first-letter</h3>
+    <p>
+      <img src="recursos\css_img\adv_first_letter.PNG" alt="Primera Letra" width="450" height="250">
+      <br>
+      El selector <b>:first-letter</b> es bastante más intuitivo, se aplica a la primera letra del texto del elemento seleccionado. Puede servir para simular letras capitales.
+    </p>
+    <h3>:first-line</h3>
+    <p>
+      <img src="recursos\css_img\adv_first_line.PNG" alt="Primera Linea" width="450" height="250">
+      <br>
+      El selector <b>:first-line</b> se aplica a la primera línea del texto del elemento seleccionado.
+    </p>
+    <hr>
+    <h2>Selector por Atributo</h2>
+    <p>
+      <img src="recursos\css_img\adv_atrib.PNG" alt="Selector por atributos" width="450" height="250"> &nbsp; <img src="recursos\css_img\adv_atrib_2.PNG" alt="Selector por Atributos específico" width="450" height="250">
+      <br>
+      Si especificamos entre corchetes el nombre de un atributo, en este caso “title”, los estilos se aplicarán a todos los elementos que tengan un atributo “title”, no importa cuál sea su valor (Ver imagen izquierda). Si quieres especificar más, puedes igualar el atributo a una cadena de texto, en este caso escribimos “title=Buscador” (Ver imagen derecha).
+    </p>
+    <h3>Atributos que empiece por esa "palabra"</h3>
+    <p>
+      <img src="recursos\css_img\adv_first_plbra.PNG" alt="Atributos empezar palabra" width="450" height="250">
+      <br>
+      Para seleccionar elementos cuyo atributo empiecen por una palabra, como puede ser “top” en el caso de los identificadores de los enlaces del ejemplo, añadimos la barra vertical(<strong>|</strong>).
+    </p>
+    <h3>Atributos que contengan esa "palabra"</h3>
+    <p>
+    <img src="recursos\css_img\adv_atrib_palabra.PNG" alt="Atributos que tengan esa palabra" width="450" height="250">
+    <br>
+    Mediante la virguilla o tilde de la eñe(<strong>~</strong>), podemos especificar que el atributo contenga una palabra, esta vez el valor del elemento sí puede estar separado por espacios.
+    </p>
+    <hr>
+    <h3>:lang</h3>
+    <p>
+      <img src="recursos\css_img\adv_lang.PNG" alt="Selector para idiomas" width="450" height="250">
+      <br>
+      <b>:lang</b> y entre paréntesis el código del idioma según el estándar ISO 639, selecciona todas las etiquetas cuyo valor del atributo “lang” coincida con la especificada entre paréntesis, como en el ejemplo.
+    </p>
+    <hr>
+    <h2>Selectores CSS3</h2>
+    <p>
+      <b>:last-child:</b> Selecciona el último elemento de la lista.
+      <br>
+      <b>:nth-child(n):</b> Seleccionan el hijo enésimo empezando desde el principio.
+      <br>
+      <b>:nth-last-child(n):</b> Seleccionan el hijo enésimo empezando desde el final.
+      <br>
+      <b>:first-of-type:</b> Selecciona al primer hijo (tipo).
+      <br>
+      <b>:last-of-type:</b> Selecciona al último hijo (tipo).
+      <br>
+      <b>:nth-of-type(n):</b> Seleccionan el hijo enésimo empezando desde el principio (tipo).
+      <br>
+      <b>:nth-last-of-type(n):</b> Seleccionan el hijo enésimo empezando desde el final(tipo).
+      <br>
+      <b>~:</b> Aplica a todos los hermanos de ese tipo.
+      <br>
+      <img src="recursos\css_img\vinieta_css3.PNG" alt="Otra funcion de la viñeta" width="350" height="200">
+    </p>
+    <hr>
+    <h2>Ejemplos</h2>
+    <p>
+      <a href="ej_adv.html" target="_blank">Ejemplo 1</a>
+    </p>
+    <p>
+      <a href="ej_adv_2.html" target="_blank">Ejemplo 2</a>
+    </p>
+    <hr>
+    <img src="recursos\css_img\adv_consejos.PNG" alt="Consejos de selectores avanzados" width="450" height="250">
+  </body>
+</html>
