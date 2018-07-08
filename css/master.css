@@ -1,0 +1,46 @@
+#principal {
+  font-variant: small-caps;
+  font-family: Georgia;
+  font-size: 38px;
+  font-style: italic;
+  text-align: center;
+  background-color: rgba(000, 000, 255, 0.4);
+}
+#logo {
+  text-align: center;
+  background-color: #2874A6;
+  margin: 20px;
+  height: 225px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  background-color: rgba(40, 38, 39, 0.2);
+}
+h2 {
+  font-variant: small-caps;
+  text-decoration: underline;
+  text-decoration-color: #2874A6;
+  text-decoration-style: dashed;
+  text-transform: capitalize;
+  font-size: 22px;
+  color: #2874A6;
+}
+hr {
+  border-color: #2874A6;
+}
+a {
+  text-decoration: none;
+  color: red;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  color: blue;
+}
+li strong {
+  color: #2874A6;
+  font-style: oblique;
+}
